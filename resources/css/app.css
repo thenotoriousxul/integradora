@@ -1,0 +1,10 @@
+.contenedor{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.navbar{
+  background-color: crimson;
+  width: 100vw;
+  height: 100vh;
+}
