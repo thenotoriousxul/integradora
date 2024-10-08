@@ -17,19 +17,19 @@
 
         body {
             font-family: Arial, sans-serif;
-            background-color: black;
+            background-color: white;
             text-align: center;
             line-height: 1;
-            color: white;
+            color: black;
             overflow-x: hidden;
         }
 
         nav {
-            background-color: #000; 
-            color: #fff; 
+            background-color: #fff; 
+            color: #000; 
             padding: 15px 20px;
             text-align: left;
-            border-bottom: 2px solid #fff; 
+            border-bottom: 2px solid black; 
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -42,22 +42,35 @@
             font-weight: bold;
             text-transform: uppercase;
             cursor: pointer;
+            color: #000;
         }
 
         .nav-links {
             display: flex;
             gap: 30px;
+            align-items: center;
         }
 
         .nav-links a {
-            color: #fff;
+            color: #000;
             text-decoration: none;
             font-size: 1rem;
             transition: color 0.3s ease;
         }
 
         .nav-links a:hover {
-            color: #ddd; 
+            color: #333; 
+        }
+
+        .cart-icon {
+            font-size: 1.5rem;
+            color: #000;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .cart-icon:hover {
+            transform: scale(1.1); 
         }
 
         .spline-background {
@@ -79,7 +92,7 @@
             position: absolute;
             text-transform: uppercase;
         }
-
+        
         spline-viewer {
             position: absolute; 
             z-index: 1; 
@@ -96,8 +109,8 @@
             gap: 20px; 
             padding: 20px;
             margin: 30px 20px;
-            background-color: rgba(0, 0, 0, 0.5); 
-            border: 2px solid #fff;
+            background-color:white; 
+            border: 2px solid black;
             border-radius: 10px;
             backdrop-filter: blur(5px); 
         }
@@ -114,7 +127,7 @@
         }
 
         h1 {
-            color: white;
+            color: black;
             font-size: 1.5rem;
             text-align: left;
             font-family: 'Helvetica', sans-serif;
@@ -188,13 +201,14 @@
             <a href="#">Catálogo</a>
             <a href="#">Personalización</a>
             <a href="#">Contacto</a>
+            <i class="fas fa-shopping-cart cart-icon"></i> <!-- Carrito de compras -->
         </div>
     </nav>
 
     <div class="spline-background">
         <div class="text-overlay">OZEZ TRC</div>
         <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.29/build/spline-viewer.js"></script>
-        <spline-viewer url="https://prod.spline.design/5L2ry0JUxSOqzhQZ/scene.splinecode"></spline-viewer>
+        <spline-viewer url="https://prod.spline.design/CfY7ppyiFw3kn8bn/scene.splinecode"></spline-viewer>
     </div>
     <main>
         <div class="contenedor-home">
