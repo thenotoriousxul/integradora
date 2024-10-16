@@ -16,7 +16,6 @@
             color: #000;
             padding: 20px;
             text-align: center;
-            border-top: 2px solid #000;
         }
 
         .redes-sociales {
@@ -49,7 +48,6 @@
         <h2>Síguenos en nuestras Redes Sociales</h2>
         <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
         <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
     </div>
     <div class="footer-text">
         <p>&copy; 2024 OZEZ. Todos los derechos reservados.</p>
