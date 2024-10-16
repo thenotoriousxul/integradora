@@ -44,32 +44,6 @@
             z-index: 1;
         }
 
-        .preload-img {
-            visibility: hidden;
-            position: absolute;
-            width: 0;
-            height: 0;
-            overflow: hidden;
-        }
-
-        .container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-            height: 100vh;
-            width: 100%;
-            overflow: hidden;
-            background-image: url('{{ asset("img/prueba2.jpeg") }}');
-            background-size: cover;
-            background-position: center;
-            transition: background-image 0.5s ease;
-        }
-
-        .container:hover {
-            background-image: url('{{ asset("img/prueba1.jpeg") }}');
-        }
-
         .contenedor::after {
             content: '';
             position: absolute;
@@ -114,16 +88,7 @@
         <h1>Estilo y comodidad en cada prenda.</h1>
     </div>
 </div>
-<div class="preload-img">
-    <img src="{{ asset('img/prueba1.jpeg') }}" alt="Pre-cargar imagen original">
-    <img src="{{ asset('img/prueba2.jpeg') }}" alt="Pre-cargar imagen hover">
-</div>
 
-<div class="container">
-    <div class="texto">
-        <h1>Personaliza tu playera, expresa tu esencia.</h1>
-    </div>
-</div>
 @include('partials.footer')
 </body>
 </html>
