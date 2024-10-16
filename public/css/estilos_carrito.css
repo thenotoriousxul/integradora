@@ -36,6 +36,7 @@ h1 {
     margin: 0 0 0 15px;
     color: #fff;
     letter-spacing: 2px;
+    background-color: red;
 }
 
 nav {
@@ -239,7 +240,7 @@ td {
 
 footer {
     background-color: #000;
-    padding: 40px 0 20px;
+    padding: 400px 0 20px;
     margin-top: 40px;
     color: #fff;
 }

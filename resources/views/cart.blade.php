@@ -7,29 +7,7 @@
     <link rel="stylesheet" href="{{ asset('css/estilos_carrito.css')}}">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="header-left">
-                <button class="icon-button"><i class="icon-search"></i></button>
-                <h1>OZEZ</h1>
-            </div>
-            <nav>
-                <a href="#">LANZAMIENTOS</a>
-                <a href="#">MEN'S</a>
-                <a href="#">WOMEN'S</a>
-                <a href="#">Ofertas</a>
-                <a href="#">Personalizacion</a>
-            </nav>
-            <div class="header-right">
-                <button class="icon-button"><i class="icon-user"></i></button>
-                <button class="icon-button cart">
-                    <i class="icon-cart"></i>
-                    <span class="cart-count">3</span>
-                </button>
-            </div>
-        </div>
-    </header>
-
+@include('partials.nav')
     <br>
     <main class="container">
         <div class="cart-header">

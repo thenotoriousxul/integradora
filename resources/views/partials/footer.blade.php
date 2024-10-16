@@ -8,7 +8,6 @@
     <style>
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
         }
 
         footer {
@@ -44,6 +43,7 @@
 <body>
 
 <footer>
+    <h1>rojo</h1>
     <div class="seccion redes-sociales">
         <h2>Síguenos en nuestras Redes Sociales</h2>
         <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
