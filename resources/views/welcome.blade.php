@@ -3,233 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Página</title>
+    <title>OZEZ - Tienda de Playeras</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
-            margin: 0;
-            padding: 0;
-            border: 0;
-            outline: 0;
-            font-size: 100%;
-            vertical-align: baseline;
-            background: transparent;
-        }
 
-        body {
-            font-family: Arial, sans-serif;
-            background-color: white;
-            text-align: center;
-            line-height: 1;
-            color: black;
-            overflow-x: hidden;
-        }
-
-        nav {
-            background-color: #fff; 
-            color: #000; 
-            padding: 15px 20px;
-            text-align: left;
-            border-bottom: 2px solid black; 
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: relative;
-            z-index: 4;
-        }
-
-        .nav-logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            text-transform: uppercase;
-            cursor: pointer;
-            color: #000;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 30px;
-            align-items: center;
-        }
-
-        .nav-links a {
-            color: #000;
-            text-decoration: none;
-            font-size: 1rem;
-            transition: color 0.3s ease;
-        }
-
-        .nav-links a:hover {
-            color: #333; 
-        }
-
-        .cart-icon {
-            font-size: 1.5rem;
-            color: #000;
-            cursor: pointer;
-            transition: transform 0.3s ease;
-        }
-
-        .cart-icon:hover {
-            transform: scale(1.1); 
-        }
-
-        .spline-background {
-            position: relative;
-            width: 100vw;
-            height: 100vh; 
-            display: flex; 
-            justify-content: center; 
-            align-items: center;
+        .preload-images {
+            visibility: hidden;
+            position: absolute;
+            width: 0;
+            height: 0;
             overflow: hidden;
         }
 
-        .text-overlay {
-            font-family: 'Helvetica', sans-serif;
-            font-weight: bold;
-            font-size: 10vw; 
-            color: white;
-            z-index: 3;
-            position: absolute;
-            text-transform: uppercase;
-        }
-        
-        spline-viewer {
-            position: absolute; 
-            z-index: 1; 
-            width: 100%; 
-            height: 100%;
-        }
-
-        .contenedor-home, .contenedor-home-dos {
-            position: relative;
-            z-index: 2;
+        .contenedor {
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
-            gap: 20px; 
-            padding: 20px;
-            margin: 30px 20px;
-            background-color:white; 
-            border: 2px solid black;
-            border-radius: 10px;
-            backdrop-filter: blur(5px); 
-        }
-
-        .hombre, .mujer {
-            height: 400px;
-            width: 300px;
-            border-radius: 10px;
-            transition: transform 0.3s ease;
-        }
-
-        .hombre:hover, .mujer:hover {
-            transform: scale(1.05); 
-        }
-
-        h1 {
-            color: black;
-            font-size: 1.5rem;
-            text-align: left;
-            font-family: 'Helvetica', sans-serif;
-            font-weight: bold;
-        }
-
-        footer {
-            background-color: #000; 
-            color: #fff; 
-            padding: 20px 0;
-            text-align: center;
-            border-top: 2px solid #fff; 
-            border-bottom: 2px solid #fff;
             position: relative;
-            bottom: 0;
+            height: 100vh;
             width: 100%;
-            z-index: 2;
+            overflow: hidden;
+            background-image: url('{{ asset("img/byn.jpeg") }}');
+            background-size: cover;
+            background-position: center;
+            transition: background-image 0.5s ease;
         }
 
-        .footer-container {
+        .contenedor:hover {
+            background-image: url('{{ asset("img/playera.jpeg") }}');
+        }
+
+        .contenedor::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(128, 128, 128, 0.4);
+            z-index: 1;
+        }
+
+        .preload-img {
+            visibility: hidden;
+            position: absolute;
+            width: 0;
+            height: 0;
+            overflow: hidden;
+        }
+
+        .container {
             display: flex;
-            flex-direction: column;
+            justify-content: center;
             align-items: center;
-            justify-content: center;
+            position: relative;
+            height: 100vh;
+            width: 100%;
+            overflow: hidden;
+            background-image: url('{{ asset("img/prueba2.jpeg") }}');
+            background-size: cover;
+            background-position: center;
+            transition: background-image 0.5s ease;
         }
 
-        .footer-container p {
-            margin: 5px 0;
+        .container:hover {
+            background-image: url('{{ asset("img/prueba1.jpeg") }}');
         }
 
-        .social-icons {
-            margin: 15px 0;
-            display: flex;
-            gap: 15px;
+        .contenedor::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(128, 128, 128, 0.4);
+            z-index: 1;
         }
 
-        .social-icons a {
-            color: #fff; 
-            font-size: 24px;
-            text-decoration: none;
-            transition: transform 0.2s ease;
+        .texto {
+            color: white;
+            font-size: 50px;
+            font-family: 'Helvetica', sans-serif;
+            font-weight: bold;
+            text-align: center;
+            white-space: pre-wrap;
+            overflow: hidden;
+            padding: 10px;
+            z-index: 2;
+            animation: escribir 1s steps(30) 1 normal both;
         }
 
-        .social-icons a:hover {
-            transform: scale(1.2);
-        }
-
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin: 10px 0;
-        }
-
-        .footer-links a {
-            color: #fff;
-            text-decoration: none;
-        }
-
-        .footer-links a:hover {
-            text-decoration: underline;
+        @keyframes escribir {
+            from { width: 0; }
+            to { width: 100%; }
         }
     </style>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <nav>
-        <div class="nav-logo">OZEZ TRC</div>
-        <div class="nav-links">
-            <a href="#">Inicio</a>
-            <a href="#">Catálogo</a>
-            <a href="#">Personalización</a>
-            <a href="#">Contacto</a>
-            <i class="fas fa-shopping-cart cart-icon"></i> <!-- Carrito de compras -->
-        </div>
-    </nav>
 
-    <div class="spline-background">
-        <div class="text-overlay">OZEZ TRC</div>
-        <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.29/build/spline-viewer.js"></script>
-        <spline-viewer url="https://prod.spline.design/CfY7ppyiFw3kn8bn/scene.splinecode"></spline-viewer>
+@include('partials.nav')
+
+<div class="preload-images">
+    <img src="{{ asset('img/byn.jpeg') }}" alt="Pre-cargar imagen original">
+    <img src="{{ asset('img/playera.jpeg') }}" alt="Pre-cargar imagen hover">
+</div>
+
+<div class="contenedor">
+    <div class="texto">
+        <h1>Estilo y comodidad en cada prenda.</h1>
     </div>
-    <main>
-        <div class="contenedor-home">
-            <img class="hombre" src="/img/hombre2.jpeg" alt="Hombre con camiseta personalizada">
-            <h1> Te damos la bienvenida a la página web de OZEZ TRC, donde encontrarás
-                una amplia selección de playeras. ¡Explora nuestro catálogo y encuentra tu estilo perfecto hoy mismo!
-            </h1>
-        </div>
-        <div class="contenedor-home-dos">
-            <h1> "En nuestra tienda, podrás personalizar tus playeras para que se adapten a tu estilo único. ¡Exprésate como nunca antes!"</h1>
-            <img class="mujer" src="/img/mujer.jpeg" alt="Mujer con camiseta personalizada">
-        </div>
-    </main>
-    <footer>
-        <div class="footer-container">
-            <p>© 2024 OZEZ TRC.</p>
-            <div class="social-icons">
-                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-            </div>
-        </div>
-    </footer>
+</div>
+<div class="preload-img">
+    <img src="{{ asset('img/prueba1.jpeg') }}" alt="Pre-cargar imagen original">
+    <img src="{{ asset('img/prueba2.jpeg') }}" alt="Pre-cargar imagen hover">
+</div>
+
+<div class="container">
+    <div class="texto">
+        <h1>Personaliza tu playera, expresa tu esencia.</h1>
+    </div>
+</div>
+@include('partials.footer')
 </body>
 </html>
