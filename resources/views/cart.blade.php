@@ -249,7 +249,9 @@
         color: #666;
     }
 </style>
+
 @section('content')
+    <br>
     <main class="container">
         <div class="cart-header">
             <h2>Tus Productos</h2>

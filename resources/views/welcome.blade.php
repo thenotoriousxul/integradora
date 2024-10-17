@@ -61,6 +61,12 @@
         letter-spacing: 2px;
     }
 
+    .titulo {
+        font-family: 'Bebas Neue', cursive;
+        font-size: 90px;
+        color: #fff;
+    }
+
     @keyframes escribir {
         from { width: 0; }
         to { width: 100%; }
@@ -71,7 +77,7 @@
 @section('content')
     <div class="contenedor">
         <div class="texto">
-            <h1>Estilo y comodidad en cada prenda.</h1>
+            <h1 class="titulo">Estilo y comodidad en cada prenda.</h1>
         </div>
     </div>
 
