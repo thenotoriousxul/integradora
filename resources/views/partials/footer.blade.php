@@ -11,8 +11,8 @@
         }
 
         footer {
-            background-color: #fff;
-            color: #000;
+            background-color: #000;
+            color: #fff;
             padding: 20px;
             text-align: center;
         }
@@ -23,20 +23,24 @@
 
         .redes-sociales a {
             margin: 0 15px;
-            color: #000;
+            color: #fff;
             font-size: 24px;
             text-decoration: none;
             transition: color 0.3s ease;
         }
 
         .redes-sociales a:hover {
-            color: #007BFF;
+            color: #82afc7;
         }
 
         .footer-text {
             font-size: 14px;
             margin-top: 10px;
-            color: #666;
+            color: #ffffff;
+        }
+        .redes-socialesh2{
+            font-size: 50px;
+            text-space: 2px;
         }
     </style>
 </head>
@@ -44,7 +48,7 @@
 
 <footer>
     <div class="seccion redes-sociales">
-        <h2>Síguenos en nuestras Redes Sociales</h2>
+        <h2 class="redes-socialesh2">Síguenos en nuestras Redes Sociales</h2>
         <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
         <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
     </div>
