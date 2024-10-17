@@ -43,7 +43,6 @@
 <body>
 
 <footer>
-    <h1>rojo</h1>
     <div class="seccion redes-sociales">
         <h2>Síguenos en nuestras Redes Sociales</h2>
         <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
