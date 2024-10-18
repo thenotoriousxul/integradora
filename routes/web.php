@@ -10,5 +10,9 @@ Route::get('/cart', function () {
     return view('cart');
 });
 
+Route::get('/cartS', function () {
+    return view('cartS');
+});
+
 
 

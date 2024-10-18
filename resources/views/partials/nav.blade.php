@@ -19,8 +19,6 @@
             transition: color 0.3s;
         }
 
-
-
         nav a:hover {
             color: #82afc7;
         }
